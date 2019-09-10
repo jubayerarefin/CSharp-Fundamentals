@@ -2,3 +2,6 @@
 *.cache
 src/GradeBook/obj/*
 src/GradeBook/bin/*
+*.pdb
+*.dll
+*.cache
