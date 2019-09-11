@@ -6,12 +6,12 @@ namespace GradeBook
     public class Book
     {
         private List<Double> grades;
-        private String name;
+        public String Name;
 
         public Book(String name)
         {
             grades = new List<Double>();
-            this.name = name;
+            Name = name;
         }
         //Add Grade to Grades List
         public void AddGrade(Double grade)
