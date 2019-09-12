@@ -7,18 +7,59 @@ namespace GradeBook
     {
         private List<Double> grades;
         public String Name;
+        private const ushort maxGradeCount = 4;
+
+        public List<Double> GetGrades()
+        {
+            return grades;
+        }
+
+        public ushort GetMaxGradeCount()
+        {
+            return maxGradeCount;
+        }
 
         public Book(String name)
         {
             grades = new List<Double>();
             Name = name;
         }
+
+        //Add Letter Grade
+        public void AddLetterGrade(Statistics result)
+        {
+            switch (result.Average)
+            {
+                case var d when d >= 90:
+                    result.Letter = 'A';
+                    break;
+                case var d when d >= 80:
+                    result.Letter = 'B';
+                    break;
+                case var d when d >= 70:
+                    result.Letter = 'C';
+                    break;
+                case var d when d >= 60:
+                    result.Letter = 'D';
+                    break;
+                default:
+                    result.Letter = 'F';
+                    break;
+            }
+        }
         //Add Grade to Grades List
         public void AddGrade(Double grade)
         {
             if (grade <= 100 && grade >= 0)
             {
-                grades.Add(grade);
+                if (grades.Count < maxGradeCount)
+                {
+                    grades.Add(grade);
+                }
+                else
+                {
+                    Console.WriteLine($"Reached maximum grade count of: {maxGradeCount}");
+                }
             }
             else
             {
@@ -42,7 +83,8 @@ namespace GradeBook
                 result.Total += mark;
             }
             result.Average = result.Total / grades.Count;
-
+            //Calculate and assign letter grade
+            AddLetterGrade(result);
             return result;
         }
 
@@ -53,6 +95,7 @@ namespace GradeBook
             Console.WriteLine($"Average: {result.Average:N2}");
             Console.WriteLine($"Max: {result.High:N2}");
             Console.WriteLine($"Min: {result.Low:N2}");
+            Console.WriteLine($"The Letter Grade is: {result.Letter}");
         }
     }
 }
