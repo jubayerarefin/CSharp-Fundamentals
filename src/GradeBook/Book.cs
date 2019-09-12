@@ -16,7 +16,14 @@ namespace GradeBook
         //Add Grade to Grades List
         public void AddGrade(Double grade)
         {
-            grades.Add(grade);
+            if (grade <= 100 && grade >= 0)
+            {
+                grades.Add(grade);
+            }
+            else
+            {
+                Console.WriteLine("Invalid Grade Value");
+            }
         }
 
         //Calculate Grade from a Double Type List
