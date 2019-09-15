@@ -38,10 +38,8 @@ namespace GradeBook
     public interface IBook
     {
         void AddGrade(double grade);
-        void AddLetterGrade(Statistics result);
         Statistics GetStatistics();
         void ShowStatistics();
-        String Name { get; }
         event GradeAddedDelegate GradeAdded;
         List<Double> GetGrades();
         ushort GetMaxGradeCount();
@@ -56,8 +54,6 @@ namespace GradeBook
         public abstract event GradeAddedDelegate GradeAdded;
 
         public abstract void AddGrade(Double grade);
-
-        public abstract void AddLetterGrade(Statistics result);
 
         public abstract List<double> GetGrades();
 
@@ -89,28 +85,6 @@ namespace GradeBook
             Name = name;
         }
 
-        //Add Letter Grade
-        public override void AddLetterGrade(Statistics result)
-        {
-            switch (result.Average)
-            {
-                case var d when d >= 90:
-                    result.Letter = 'A';
-                    break;
-                case var d when d >= 80:
-                    result.Letter = 'B';
-                    break;
-                case var d when d >= 70:
-                    result.Letter = 'C';
-                    break;
-                case var d when d >= 60:
-                    result.Letter = 'D';
-                    break;
-                default:
-                    result.Letter = 'F';
-                    break;
-            }
-        }
         //Add Grade to Grades List
         public override void AddGrade(Double grade)
         {
@@ -137,23 +111,13 @@ namespace GradeBook
         //Calculate Grade from a Double Type List
         public override Statistics GetStatistics()
         {
-            Statistics result = new Statistics
-            {
-                Total = 0,
-                Average = 0,
-                High = double.MinValue,
-                Low = double.MaxValue
-            };
+            Statistics result = new Statistics();
             //Calculate Total, Average, Max & Min
             foreach (var mark in grades)
             {
-                result.High = Math.Max(mark, result.High);
-                result.Low = Math.Min(mark, result.Low);
-                result.Total += mark;
+                result.Add(mark); ;
             }
-            result.Average = result.Total / grades.Count;
-            //Calculate and assign letter grade
-            AddLetterGrade(result);
+
             return result;
         }
 
@@ -199,10 +163,11 @@ namespace GradeBook
                     if (grades.Count < maxGradeCount)
                     {
                         grades.Add(grade);
-                        var writer = File.AppendText($"../../../DiskBook/{Name}.txt");
-                        writer.WriteLine(grade);
-                        writer.Close();
-                        GradeAdded?.Invoke(this, new EventArgs());
+                        using (var writer = File.AppendText($"../../../DiskBook/{Name}.txt"))
+                        {
+                            writer.WriteLine(grade);
+                            GradeAdded?.Invoke(this, new EventArgs());
+                        }
                     }
                     else
                     {
@@ -222,23 +187,18 @@ namespace GradeBook
 
         public override Statistics GetStatistics()
         {
-            Statistics result = new Statistics
-            {
-                Total = 0,
-                Average = 0,
-                High = double.MinValue,
-                Low = double.MaxValue
-            };
+            Statistics result = new Statistics();
             //Calculate Total, Average, Max & Min
-            foreach (var mark in grades)
+            using (var reader = File.OpenText($"../../../DiskBook/{Name}.txt"))
             {
-                result.High = Math.Max(mark, result.High);
-                result.Low = Math.Min(mark, result.Low);
-                result.Total += mark;
+                var line = reader.ReadLine();
+                while (line != null)
+                {
+                    result.Add(double.Parse(line));
+                    line = reader.ReadLine();
+                }
             }
-            result.Average = result.Total / grades.Count;
-            //Calculate and assign letter grade
-            AddLetterGrade(result);
+
             return result;
         }
 
@@ -263,28 +223,6 @@ namespace GradeBook
             writer.WriteLine($"Min: {result.Low:N2}");
             writer.WriteLine($"The Letter Grade is: {result.Letter}");
             writer.Close();
-        }
-
-        public override void AddLetterGrade(Statistics result)
-        {
-            switch (result.Average)
-            {
-                case var d when d >= 90:
-                    result.Letter = 'A';
-                    break;
-                case var d when d >= 80:
-                    result.Letter = 'B';
-                    break;
-                case var d when d >= 70:
-                    result.Letter = 'C';
-                    break;
-                case var d when d >= 60:
-                    result.Letter = 'D';
-                    break;
-                default:
-                    result.Letter = 'F';
-                    break;
-            }
         }
     }
 }

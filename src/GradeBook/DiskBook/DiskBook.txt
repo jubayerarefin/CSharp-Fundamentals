@@ -1,14 +1,10 @@
-70
+97
+85
+84
 76
-78
-79
-86
-87
-88
-89
 
-Result: 350.00
-Average: 87.50
-Max: 89.00
-Min: 86.00
+Result: 342.00
+Average: 85.50
+Max: 84.00
+Min: 76.00
 The Letter Grade is: B
