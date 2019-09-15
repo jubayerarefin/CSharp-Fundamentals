@@ -1,0 +1,9 @@
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\b\GradeBook\Debug\netcoreapp2.2\GradeBook.deps.json
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\b\GradeBook\Debug\netcoreapp2.2\GradeBook.runtimeconfig.json
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\b\GradeBook\Debug\netcoreapp2.2\GradeBook.runtimeconfig.dev.json
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\b\GradeBook\Debug\netcoreapp2.2\GradeBook.dll
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\i\GradeBook\Debug\netcoreapp2.2\GradeBook.csproj.CoreCompileInputs.cache
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\i\GradeBook\Debug\netcoreapp2.2\GradeBook.AssemblyInfoInputs.cache
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\i\GradeBook\Debug\netcoreapp2.2\GradeBook.AssemblyInfo.cs
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\i\GradeBook\Debug\netcoreapp2.2\GradeBook.csproj.CopyComplete
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\i\GradeBook\Debug\netcoreapp2.2\GradeBook.dll

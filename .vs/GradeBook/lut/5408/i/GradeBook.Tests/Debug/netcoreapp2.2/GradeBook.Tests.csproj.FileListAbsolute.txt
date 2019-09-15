@@ -1,0 +1,13 @@
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\b\GradeBook.Tests\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\b\GradeBook.Tests\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\b\GradeBook.Tests\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\b\GradeBook.Tests\Debug\netcoreapp2.2\GradeBook.Tests.deps.json
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\b\GradeBook.Tests\Debug\netcoreapp2.2\GradeBook.Tests.runtimeconfig.json
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\b\GradeBook.Tests\Debug\netcoreapp2.2\GradeBook.Tests.runtimeconfig.dev.json
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\b\GradeBook.Tests\Debug\netcoreapp2.2\GradeBook.Tests.dll
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\i\GradeBook.Tests\Debug\netcoreapp2.2\GradeBook.Tests.csprojAssemblyReference.cache
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\i\GradeBook.Tests\Debug\netcoreapp2.2\GradeBook.Tests.csproj.CoreCompileInputs.cache
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\i\GradeBook.Tests\Debug\netcoreapp2.2\GradeBook.Tests.AssemblyInfoInputs.cache
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\i\GradeBook.Tests\Debug\netcoreapp2.2\GradeBook.Tests.AssemblyInfo.cs
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\i\GradeBook.Tests\Debug\netcoreapp2.2\GradeBook.Tests.csproj.CopyComplete
+D:\DotNetProjects\GradeBook\.vs\GradeBook\lut\0\i\GradeBook.Tests\Debug\netcoreapp2.2\GradeBook.Tests.dll
