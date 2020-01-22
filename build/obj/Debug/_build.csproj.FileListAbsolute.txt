@@ -1,0 +1,11 @@
+D:\DotNetProjects\GradeBook\build\bin\Debug\_build.deps.json
+D:\DotNetProjects\GradeBook\build\bin\Debug\_build.runtimeconfig.json
+D:\DotNetProjects\GradeBook\build\bin\Debug\_build.runtimeconfig.dev.json
+D:\DotNetProjects\GradeBook\build\bin\Debug\_build.dll
+D:\DotNetProjects\GradeBook\build\bin\Debug\_build.pdb
+D:\DotNetProjects\GradeBook\build\obj\Debug\_build.csprojAssemblyReference.cache
+D:\DotNetProjects\GradeBook\build\obj\Debug\_build.csproj.CoreCompileInputs.cache
+D:\DotNetProjects\GradeBook\build\obj\Debug\_build.AssemblyInfoInputs.cache
+D:\DotNetProjects\GradeBook\build\obj\Debug\_build.AssemblyInfo.cs
+D:\DotNetProjects\GradeBook\build\obj\Debug\_build.dll
+D:\DotNetProjects\GradeBook\build\obj\Debug\_build.pdb
